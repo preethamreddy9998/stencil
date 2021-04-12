@@ -12,6 +12,8 @@ export namespace Components {
     }
     interface HomeComponent {
     }
+    interface MainComponent {
+    }
 }
 declare global {
     interface HTMLFooterComponentElement extends Components.FooterComponent, HTMLStencilElement {
@@ -32,10 +34,17 @@ declare global {
         prototype: HTMLHomeComponentElement;
         new (): HTMLHomeComponentElement;
     };
+    interface HTMLMainComponentElement extends Components.MainComponent, HTMLStencilElement {
+    }
+    var HTMLMainComponentElement: {
+        prototype: HTMLMainComponentElement;
+        new (): HTMLMainComponentElement;
+    };
     interface HTMLElementTagNameMap {
         "footer-component": HTMLFooterComponentElement;
         "header-component": HTMLHeaderComponentElement;
         "home-component": HTMLHomeComponentElement;
+        "main-component": HTMLMainComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -45,10 +54,13 @@ declare namespace LocalJSX {
     }
     interface HomeComponent {
     }
+    interface MainComponent {
+    }
     interface IntrinsicElements {
         "footer-component": FooterComponent;
         "header-component": HeaderComponent;
         "home-component": HomeComponent;
+        "main-component": MainComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -58,6 +70,7 @@ declare module "@stencil/core" {
             "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
             "home-component": LocalJSX.HomeComponent & JSXBase.HTMLAttributes<HTMLHomeComponentElement>;
+            "main-component": LocalJSX.MainComponent & JSXBase.HTMLAttributes<HTMLMainComponentElement>;
         }
     }
 }
