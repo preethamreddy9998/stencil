@@ -6,85 +6,58 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface CardComponent {
-        /**
-          * The card image
-         */
-        "cardIcon": string;
-        /**
-          * card label
-         */
-        "cardLabel": string;
+    interface FooterComponent {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface HeaderComponent {
+    }
+    interface HomeComponent {
     }
 }
 declare global {
-    interface HTMLCardComponentElement extends Components.CardComponent, HTMLStencilElement {
+    interface HTMLFooterComponentElement extends Components.FooterComponent, HTMLStencilElement {
     }
-    var HTMLCardComponentElement: {
-        prototype: HTMLCardComponentElement;
-        new (): HTMLCardComponentElement;
+    var HTMLFooterComponentElement: {
+        prototype: HTMLFooterComponentElement;
+        new (): HTMLFooterComponentElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLHeaderComponentElement extends Components.HeaderComponent, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLHeaderComponentElement: {
+        prototype: HTMLHeaderComponentElement;
+        new (): HTMLHeaderComponentElement;
+    };
+    interface HTMLHomeComponentElement extends Components.HomeComponent, HTMLStencilElement {
+    }
+    var HTMLHomeComponentElement: {
+        prototype: HTMLHomeComponentElement;
+        new (): HTMLHomeComponentElement;
     };
     interface HTMLElementTagNameMap {
-        "card-component": HTMLCardComponentElement;
-        "my-component": HTMLMyComponentElement;
+        "footer-component": HTMLFooterComponentElement;
+        "header-component": HTMLHeaderComponentElement;
+        "home-component": HTMLHomeComponentElement;
     }
 }
 declare namespace LocalJSX {
-    interface CardComponent {
-        /**
-          * The card image
-         */
-        "cardIcon"?: string;
-        /**
-          * card label
-         */
-        "cardLabel"?: string;
+    interface FooterComponent {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface HeaderComponent {
+    }
+    interface HomeComponent {
     }
     interface IntrinsicElements {
-        "card-component": CardComponent;
-        "my-component": MyComponent;
+        "footer-component": FooterComponent;
+        "header-component": HeaderComponent;
+        "home-component": HomeComponent;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "card-component": LocalJSX.CardComponent & JSXBase.HTMLAttributes<HTMLCardComponentElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
+            "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
+            "home-component": LocalJSX.HomeComponent & JSXBase.HTMLAttributes<HTMLHomeComponentElement>;
         }
     }
 }
