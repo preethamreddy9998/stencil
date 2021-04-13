@@ -2,14 +2,13 @@ import { Component, h} from '@stencil/core';
 
 @Component({
   tag: 'home-component',
-  styleUrl: 'home-component.css',
-  shadow: true,
+  styleUrl: 'home-component.css'
 })
 export class HomeComponent {
-
+  
   render() {
     return (
-    <div class="main_container">
+    <div class="main_container row">
     <div class="top_banner">
       <img class="banner_image" src="assets/img/banner.jpg"  />
       <div style={{textAlign: 'center'}}>
