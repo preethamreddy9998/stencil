@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface BenefitsNavigator {
+    }
     interface FooterComponent {
     }
     interface HeaderComponent {
@@ -16,6 +18,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLBenefitsNavigatorElement extends Components.BenefitsNavigator, HTMLStencilElement {
+    }
+    var HTMLBenefitsNavigatorElement: {
+        prototype: HTMLBenefitsNavigatorElement;
+        new (): HTMLBenefitsNavigatorElement;
+    };
     interface HTMLFooterComponentElement extends Components.FooterComponent, HTMLStencilElement {
     }
     var HTMLFooterComponentElement: {
@@ -41,6 +49,7 @@ declare global {
         new (): HTMLMainComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "benefits-navigator": HTMLBenefitsNavigatorElement;
         "footer-component": HTMLFooterComponentElement;
         "header-component": HTMLHeaderComponentElement;
         "home-component": HTMLHomeComponentElement;
@@ -48,6 +57,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface BenefitsNavigator {
+    }
     interface FooterComponent {
     }
     interface HeaderComponent {
@@ -57,6 +68,7 @@ declare namespace LocalJSX {
     interface MainComponent {
     }
     interface IntrinsicElements {
+        "benefits-navigator": BenefitsNavigator;
         "footer-component": FooterComponent;
         "header-component": HeaderComponent;
         "home-component": HomeComponent;
@@ -67,6 +79,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "benefits-navigator": LocalJSX.BenefitsNavigator & JSXBase.HTMLAttributes<HTMLBenefitsNavigatorElement>;
             "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
             "home-component": LocalJSX.HomeComponent & JSXBase.HTMLAttributes<HTMLHomeComponentElement>;

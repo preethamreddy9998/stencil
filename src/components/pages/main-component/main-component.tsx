@@ -10,21 +10,27 @@ import { Router } from '../../shared/router';
   styleUrl: 'main-component.css'
 })
 export class MainComponent {
-
   render() {
     return (
       <Host>
-        <div class="div_container">
-            <header-component></header-component>
-            <Router.Switch>
-              <Route path="/" to="/home" />
-              <Route path="/main" to="/home" />
-              <Route path="/home">
-                    <home-component></home-component>
-              </Route>
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                  <header-component></header-component>
+                  <Router.Switch>
+                    <Route path="/" to="/home" />
+                    <Route path="/main" to="/home" />
+                    <Route path="/home">
+                          <home-component></home-component>
+                    </Route>
+                    <Route path="/benefits">
+                          <benefits-navigator></benefits-navigator>
+                    </Route>
 
-              </Router.Switch>
-              <footer-component></footer-component>
+                    </Router.Switch>
+                    <footer-component></footer-component>
+              </div>
+            </div>
           </div>
 
       </Host>

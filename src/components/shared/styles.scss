@@ -1,18 +1,37 @@
 body {
     background-color: #8080801f !important;
+    color: #0073a8;
+    font-size: 14px;
+    a {
+        color: #0073a8;
+        font-size: 14px;
+    }
 }
 
-.div_container {
-    width: 100%;
+.container-fluid {
+    //padding-right: 0px;
+    //padding-left: 0px;
+    //overflow: hidden;
 }
 
-.header_container {
-    height: 50px;
+.headerContainer {
+    //height: 70px;
     background-color: #fff;
-}
-
-.header_image {
-    height: 30px;
+    .header_image {
+        width: 70px;
+    }
+    nav {
+        margin-top: 6px;
+        a {
+            color: #0073a8 !important;
+            .fa {
+                margin-right: 3px;
+            }
+        }
+        .onlyIcons {
+            margin: 12px 20px;
+        }
+    }
 }
 
 .banner_image {
