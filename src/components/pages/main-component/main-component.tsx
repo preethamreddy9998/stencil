@@ -7,8 +7,7 @@ import { Router } from '../../shared/router';
 
 @Component({
   tag: 'main-component',
-  styleUrl: 'main-component.css',
-  shadow: true,
+  styleUrl: 'main-component.css'
 })
 export class MainComponent {
 

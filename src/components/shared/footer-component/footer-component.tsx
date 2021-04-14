@@ -2,8 +2,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'footer-component',
-  styleUrl: 'footer-component.css',
-  shadow: true,
+  styleUrl: 'footer-component.css'
 })
 export class FooterComponent {
 
