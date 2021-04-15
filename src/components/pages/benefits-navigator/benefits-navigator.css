@@ -1,3 +1,54 @@
-:host {
-  display: block;
+.main_container {
+    padding-bottom: 30px;
+}
+
+.benefits_banner {
+    background: url('assets/img/5db73cd5dba56c10c8f29c46b996192b.iix') no-repeat left top;
+    width: 100%;
+    padding: 50px 50px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.top_banner_form {
+    margin-top: -15px;
+}
+
+.card_container {
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    cursor: pointer;
+    height: 180px;
+    margin: 5px 0px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid rgba(0, 0, 0, .125);
+    border-bottom: 2px solid #67bd45 !important;
+    border-radius: .25rem;
+    font-size: 14px;
+    color: #000000;
+}
+
+.card:hover {
+    background-color: #b7d6aa;
+}
+
+.card p {
+    padding: 0px;
+    margin: 0px;
+    padding-top: 20px;
+}
+
+.card-body {
+    text-align: center;
+    padding: 1.25rem;
+}
+
+.card_image {
+    height: 100px;
 }
