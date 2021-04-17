@@ -14,6 +14,7 @@ export class BenefitsNavigator {
   render() {
     return (
     <div class="main_container row">
+        <iamsick-component></iamsick-component>
       <div class="top_banner benefits_banner col-md-12">
           <h1>Benefits Navigator</h1>
           <p2>Know where to go when you need care. Explore our interactive guide below to find your best options for care.</p2>
