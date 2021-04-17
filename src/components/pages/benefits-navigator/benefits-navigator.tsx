@@ -1,5 +1,5 @@
 import { Component, h, State } from '@stencil/core';
-import { href } from 'stencil-router-v2';
+//import { href } from 'stencil-router-v2';
 //import { href } from 'stencil-router-v2';
 
 @Component({
@@ -8,13 +8,29 @@ import { href } from 'stencil-router-v2';
 })
 export class BenefitsNavigator {
   @State() sickOrInjured: boolean = false;
-  sickOrInjuredMethod(){
-    this.sickOrInjured = !this.sickOrInjured;
+  @State() ineedPreventive: boolean = false;
+  @State() ihaveongoing: boolean = false;
+  @State() preferredfacilities: boolean = false;
+  hideMe(value){
+    if(value == 'sickOrInjured'){
+      this.sickOrInjured = true;
+    }else if(value == 'ineedPreventive'){
+      this.ineedPreventive = true;
+    }else if(value == 'ihaveongoing'){
+      this.ihaveongoing = true;
+    }else if(value == 'preferredfacilities'){
+      this.preferredfacilities = true;
+    }else {
+      this.sickOrInjured = false;
+      this.ineedPreventive = false;
+      this.ihaveongoing = false;
+      this.preferredfacilities = false;
+    }
+    
   }
   render() {
     return (
     <div class="main_container row">
-        <iamsick-component></iamsick-component>
       <div class="top_banner benefits_banner col-md-12">
           <h1>Benefits Navigator</h1>
           <p2>Know where to go when you need care. Explore our interactive guide below to find your best options for care.</p2>
@@ -34,69 +50,16 @@ export class BenefitsNavigator {
       </form>
   
       <div class="container">
-        <div class="row">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a {...href('/home')}>Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Benefits Navigator</li>
-            </ol>
-          </nav>
-        </div>
-        {this.sickOrInjured ? 
-              <div class="row">
-
-                <div class="col-md-12">
-                  <h3 class="mt-top-zero"><font color="#0096db"><b>Sick or injured</b></font></h3>
-                  <p><font color="Red">Call 911 if is an emergency or if you require immediate medical attention for conditions such as severe chest pain, trouble breathing, or serious injuries or wounds, etc.</font></p>
-                </div>
-                <div class="col-md-12">
-                  <div class="card noneheight">
-                        <div class="card-body">
-                          <h4><b>See a doctor now with 98point6</b></h4> 
-                          Colds and flu, pink eye, infections, scrapes, rashes, etc.<br/><br/> <img src="assets/img/cost.png" class="card_image_icon" /> <b> $5 </b>| <img src="assets/img/stopwatch.png" class="card_image_icon"/><b> 5 minutes</b> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="card noneheight">
-                        <div class="card-body">
-                          <h4><b>See a doctor now with 98point6</b></h4> 
-                          Colds and flu, pink eye, infections, scrapes, rashes, etc.<br/><br/> <img src="assets/img/cost.png" class="card_image_icon" /> <b> $5 </b>| <img src="assets/img/stopwatch.png" class="card_image_icon"/><b> 5 minutes</b> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="card noneheight">
-                        <div class="card-body">
-                          <h4><b>See a doctor now with 98point6</b></h4> 
-                          Colds and flu, pink eye, infections, scrapes, rashes, etc.<br/><br/> <img src="assets/img/cost.png" class="card_image_icon" /> <b> $5 </b>| <img src="assets/img/stopwatch.png" class="card_image_icon"/><b> 5 minutes</b> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="card noneheight">
-                        <div class="card-body">
-                          <h4><b>See a doctor now with 98point6</b></h4> 
-                          Colds and flu, pink eye, infections, scrapes, rashes, etc.<br/><br/> <img src="assets/img/cost.png" class="card_image_icon" /> <b> $5 </b>| <img src="assets/img/stopwatch.png" class="card_image_icon"/><b> 5 minutes</b> 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-12">
-                  <img src="assets/img/cost.png" class="card_image_icon" /> = Average out-of-pocket cost (subject to your deductible) | 
-                 <img src="assets/img/stopwatch.png" class="card_image_icon"/> = Average wait time 
-                </div>
-
-                <div class="col-md-12 float-right">
-                   <button id="back-page1-sick" onClick={this.sickOrInjuredMethod.bind(this)} class="backBtn">Back</button>
-                </div>
-
-              </div>
-         : null }
-        {!this.sickOrInjured ? 
+        <breadcrumb-component></breadcrumb-component>
+        {this.sickOrInjured ? <iamsick-component></iamsick-component> : null }
+        {this.ineedPreventive ? <ineedprevcare-component></ineedprevcare-component> : null }
+        {this.ihaveongoing ? <ihaveongoing-component></ihaveongoing-component> : null }
+        {this.preferredfacilities ? <preferredfacilities-component></preferredfacilities-component> : null }
+        
+        {(!this.sickOrInjured && !this.ineedPreventive && !this.preferredfacilities && !this.ihaveongoing) ? 
           <div class="row">
               <div class="col-lg-6 col-md-12 col-sm-12">
-                  <div class="card">
+                  <div class="card" onClick={() => this.hideMe('ineedPreventive')}>
                       <div class="card-body">
                           <img class="card_image" src="assets/img/kwtg_healthhub.png" />
                           <p>I need preventive care</p>
@@ -104,7 +67,7 @@ export class BenefitsNavigator {
                   </div>
               </div>
               <div class="col-lg-6 col-md-12 col-sm-12">
-                  <div class="card" onClick={this.sickOrInjuredMethod.bind(this)}>
+                  <div class="card" onClick={() => this.hideMe('sickOrInjured')}>
                       <div class="card-body">
                           <img class="card_image" src="assets/img/Get_The_Right_Care.png" />
                           <p>I'm sick or injured</p>
@@ -112,7 +75,7 @@ export class BenefitsNavigator {
                   </div>
               </div>
               <div class="col-lg-6 col-md-12 col-sm-12">
-                  <div class="card">
+                  <div class="card" onClick={() => this.hideMe('ihaveongoing')}>
                       <div class="card-body">
                           <img class="card_image" src="assets/img/chart.png" />
                           <p>I have an on-going condition or serious diagnosis</p>
@@ -137,7 +100,7 @@ export class BenefitsNavigator {
                   </div>
               </div>
               <div class="col-lg-6 col-md-12 col-sm-12">
-                  <div class="card">
+                  <div class="card" onClick={() => this.hideMe('preferredfacilities')}>
                       <div class="card-body">
                           <img class="card_image" src="assets/img/provider.png" />
                           <p>Preferred facilities</p>
@@ -161,7 +124,9 @@ export class BenefitsNavigator {
                   </div>
               </div>
           </div>
-           : null }
+           : <div class="col-md-12 float-right">
+           <button id="back-page1-sick" onClick={this.hideMe.bind(this)} class="backBtn">Back</button>
+        </div> }
         
       </div>
   </div>

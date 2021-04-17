@@ -38,6 +38,10 @@
     height: auto !important;
 }
 
+.heightpreferred {
+    height: 260px !important;
+}
+
 .card:hover {
     background-color: #b9ddb4;
 }
