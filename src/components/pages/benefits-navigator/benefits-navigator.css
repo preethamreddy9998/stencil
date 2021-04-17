@@ -23,19 +23,23 @@
     width: 100%;
     cursor: pointer;
     height: 180px;
-    margin: 5px 0px;
+    margin-bottom: 10px;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
     border: 2px solid rgba(0, 0, 0, .125);
     border-bottom: 2px solid #67bd45 !important;
     border-radius: .25rem;
-    font-size: 14px;
+    font-size: 16px;
     color: #000000;
 }
 
+.noneheight {
+    height: auto !important;
+}
+
 .card:hover {
-    background-color: #b7d6aa;
+    background-color: #b9ddb4;
 }
 
 .card p {
@@ -51,4 +55,32 @@
 
 .card_image {
     height: 100px;
+}
+
+.card_image_icon {
+    max-height: 25px;
+}
+
+.backBtn {
+    position: fixed;
+    right: 15%;
+    bottom: 200px;
+    z-index: 1;
+    width: 100px;
+    background: #0096db;
+    background-image: -webkit-linear-gradient(top, #0096db, #2980b9);
+    background-image: -moz-linear-gradient(top, #0096db, #2980b9);
+    background-image: -ms-linear-gradient(top, #0096db, #2980b9);
+    background-image: -o-linear-gradient(top, #0096db, #2980b9);
+    background-image: linear-gradient(to bottom, #0096db, #2980b9);
+    -webkit-border-radius: 20;
+    -moz-border-radius: 20;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #0096db;
+    font-size: 16px;
+    background: #ffffff;
+    padding: 5px 10px 5px 10px;
+    border: solid #0096db 2px;
+    text-decoration: none;
 }
