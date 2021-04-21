@@ -1,11 +1,14 @@
 import { Component, h } from '@stencil/core';
+import { href } from 'stencil-router-v2';
 
 @Component({
   tag: 'preferredfacilities-component',
   styleUrl: 'preferredfacilities-component.css'
 })
 export class PreferredfacilitiesComponent {
-
+  outsideLink(link) {
+    window.location = link
+  }
   render() {
     return (
       <div class="row">
@@ -18,7 +21,7 @@ export class PreferredfacilitiesComponent {
         <h4><font color="#67bd45"><b>NextEra Energy Clinics – South Florida Residents</b></font></h4>
         <div class="row">
             <div class="col-md-6 col-xl-3">
-              <div class="card heightpreferred">
+              <div class="card heightpreferred nohover">
                     <div class="card-body">
                       <div id="junoclinic"> 
                         <b>Juno Beach Office</b>
@@ -35,7 +38,7 @@ export class PreferredfacilitiesComponent {
               </div>
             </div>
             <div class="col-md-6 col-xl-3">
-              <div class="card heightpreferred">
+              <div class="card heightpreferred nohover">
                     <div class="card-body">
                       <div id="junoclinic"> 
                         <b>Juno Beach Office</b>
@@ -52,7 +55,7 @@ export class PreferredfacilitiesComponent {
               </div>
             </div>
             <div class="col-md-6 col-xl-3">
-              <div class="card heightpreferred">
+              <div class="card heightpreferred nohover">
                     <div class="card-body">
                       <div id="junoclinic"> 
                         <b>Juno Beach Office</b>
@@ -69,7 +72,7 @@ export class PreferredfacilitiesComponent {
               </div>
             </div>
             <div class="col-md-6 col-xl-3">
-              <div class="card heightpreferred">
+              <div class="card heightpreferred nohover">
                     <div class="card-body">
                       <div id="junoclinic"> 
                         <b>Juno Beach Office</b>
@@ -97,7 +100,7 @@ export class PreferredfacilitiesComponent {
         
         <div class="row">
         <div class="col-md-6">
-              <div class="card noneheight">
+              <div class="card noneheight" onClick={() => this.outsideLink('https://www.jupitermed.com/')}>
                     <div class="card-body">
                       <img src="assets/img/jmc.png" style={{maxWidth: '100px'}}/><br/> <a href="tel:5612500665">(561) 250-0665</a><br/><br/> <a href="https://www.jupitermed.com/" target="_blank">https://www.jupitermed.com/</a> <br/><br/> <font class="smallfontsize"><a href="https://goo.gl/maps/m7ND4VuDo67dgi7y7" target="_blank">1210 S. Old Dixie Hwy. <br/> Jupiter, FL 33458</a></font><br/>
                     </div>
@@ -107,7 +110,7 @@ export class PreferredfacilitiesComponent {
       </div>
       <div class="col-md-12">
         <br/>
-        <h4><font color="#67bd45"><b>Urgent care facilities</b></font></h4>
+        <h4 ><font color="#67bd45"><b>Urgent care facilities</b></font></h4>
         <p class="blackfont">MD Now provides comprehensive healthcare services at more than 40 physician-led, state-of-the-art clinics across Florida 365 days a year from 8:00 AM to 8:00 PM. Walk in or call 888-636-6991.</p>
 
         <p class="blackfont">For a full list of facilities available to you, please visit myHealthHub.</p>
@@ -115,9 +118,11 @@ export class PreferredfacilitiesComponent {
         <div class="row">
         <div class="col-md-6">
               <div class="card noneheight">
-                    <div class="card-body">
+                    <div class="card-body" onClick={() =>
+                       this.outsideLink('https://www.mymdnow.com/locations/')}>
                     <img src="assets/img/mdnow.png" style={{maxWidth: '100px'}} /><br/><br/> Find an MD Now location near you 
                     </div>
+                    
               </div>
             </div>
         </div>

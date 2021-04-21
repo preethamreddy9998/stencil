@@ -9,6 +9,9 @@ export class HeaderComponent {
 	@State() navServicenopen: boolean = false;
 	@State() navMyItemsopen: boolean = false;
 	@State() message: string = 'abc';
+	outsideLink(link) {
+		window.location = link
+	  }
 	menuHRToggle() {
 		this.navHRopen = !this.navHRopen;
 		this.navServicenopen = false;
@@ -52,10 +55,8 @@ export class HeaderComponent {
 										'dropdown-menu': true,
 										'show': this.navHRopen
 										}} aria-labelledby="navbarDropdown">
-										<li><a class="dropdown-item" href="#">Action</a></li>
-										<li><a class="dropdown-item" href="#">Another action</a></li>
-										<li><hr class="dropdown-divider"/></li>
-										<li><a class="dropdown-item" href="#">Something else here</a></li>
+										<li onClick={() => this.outsideLink('http://myportal.fplu.fpl.com/irj/servlet/prt/portal/prtroot/pcd!3aportal_content!2fApplications!2fcom.fpl.hr.iview.ssosfrecruit')}><a class="dropdown-item" href="#">HR4U (SuccessFactors)</a></li>
+										<li onClick={() => this.outsideLink('https://neesnsysdev.service-now.com/esc?id=hr_apps')}><a class="dropdown-item" href="#">More apps</a></li>
 									</ul>
 								</li>
 								<li class="nav-item dropdown">
@@ -66,10 +67,8 @@ export class HeaderComponent {
 										'dropdown-menu': true,
 										'show': this.navServicenopen
 										}} aria-labelledby="navbarDropdown">
-										<li><a class="dropdown-item" href="#">Action</a></li>
-										<li><a class="dropdown-item" href="#">Another action</a></li>
-										<li><hr class="dropdown-divider"/></li>
-										<li><a class="dropdown-item" href="#">Something else here</a></li>
+										<li onClick={() => this.outsideLink('https://neesnsysdev.service-now.com/esc?id=esc_sc_category')}><a class="dropdown-item" href="#">Request catalog</a></li>
+										<li onClick={() => this.outsideLink('https://neesnsysdev.service-now.com/esc?id=esc_knowledge_home')}><a class="dropdown-item" href="#">Knowledge articles</a></li>
 									</ul>
 								</li>
 								<li class="nav-item dropdown">
@@ -80,16 +79,21 @@ export class HeaderComponent {
 										'dropdown-menu': true,
 										'show': this.navMyItemsopen
 										}} aria-labelledby="navbarDropdown">
-										<li><a class="dropdown-item" href="#">Action</a></li>
-										<li><a class="dropdown-item" href="#">Another action</a></li>
-										<li><hr class="dropdown-divider"/></li>
-										<li><a class="dropdown-item" href="#">Something else here</a></li>
+										<li onClick={() => this.outsideLink('https://neesnsysdev.service-now.com/esc?id=hr_my_requests')}><a class="dropdown-item" href="#">My requests</a></li>
+										<li onClick={() => this.outsideLink('https://neesnsysdev.service-now.com/esc?id=hrm_todos_page')}><a class="dropdown-item" href="#">My to-dos</a></li>										
 									</ul>
 								</li>
-								<li class="nav-item">
+								<li onClick={() => this.outsideLink('https://neesnsysdev.service-now.com/esc?id=hr_favorites')}class="nav-item">
 									<a href="#"><i class="fa fa-address-book onlyIcons" aria-hidden="true"></i></a>
 								</li>
-								<li class="nav-item">
+								{/* <li class={{
+										'dropdown-menu': true,
+										'show': this.navHRopen
+										}} aria-labelledby="navbarDropdown">
+										<li onClick={() => this.outsideLink('https://neesnsysdev.service-now.com/esc?id=hr_user_profile&sys_id=197e25ca1b2224100a90cae5624bcb02')}><a class="dropdown-item" href="#">My profile</a></li>
+										<li onClick={() => this.outsideLink('https://neesnsysdev.service-now.com/esc?id=actsub_notif_pref')}><a class="dropdown-item" href="#">Notifications & subscriptions</a></li>
+									</li> */}
+								<li onClick={() => this.outsideLink('https://neesnsysdev.service-now.com/esc?id=hr_user_profile&sys_id=197e25ca1b2224100a90cae5624bcb02')}class="nav-item">
 								<a href="#"><i class="fa fa-address-book onlyIcons" aria-hidden="true"></i></a>
 								</li>
 								<li class="nav-item">

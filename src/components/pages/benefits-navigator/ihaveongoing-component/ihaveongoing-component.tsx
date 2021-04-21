@@ -22,17 +22,17 @@ export class IhaveongoingComponent {
         </div>
         <div class="card noneheight">
               <div class="card-body">
-                I need to speak to my Blue Cross Blue Shield advocate
+              I want a second opinion
               </div>
         </div>
         <div class="card noneheight">
               <div class="card-body">
-                  Annual physical
+              I may need surgery 
               </div>
         </div>
         <div class="card noneheight">
               <div class="card-body">
-                  Annual physical
+              I received a cancer diagnosis
               </div>
         </div>
       </div>

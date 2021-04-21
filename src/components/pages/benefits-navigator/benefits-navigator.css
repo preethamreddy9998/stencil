@@ -19,52 +19,6 @@
     padding: 20px;
 }
 
-.card {
-    width: 100%;
-    cursor: pointer;
-    height: 180px;
-    margin-bottom: 10px;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 2px solid rgba(0, 0, 0, .125);
-    border-bottom: 2px solid #67bd45 !important;
-    border-radius: .25rem;
-    font-size: 16px;
-    color: #000000;
-}
-
-.noneheight {
-    height: auto !important;
-}
-
-.heightpreferred {
-    height: 260px !important;
-}
-
-.card:hover {
-    background-color: #b9ddb4;
-}
-
-.card p {
-    padding: 0px;
-    margin: 0px;
-    padding-top: 20px;
-}
-
-.card-body {
-    text-align: center;
-    padding: 1.25rem;
-}
-
-.card_image {
-    height: 100px;
-}
-
-.card_image_icon {
-    max-height: 25px;
-}
-
 .backBtn {
     position: fixed;
     right: 15%;

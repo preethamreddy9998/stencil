@@ -1,3 +1,4 @@
+@import '../../assets/bootstrap.min.css';
 body {
     background-color: #8080801f !important;
     color: #0073a8;
@@ -173,5 +174,47 @@ img {
         padding-right: 15px !important;
         padding-left: 15px !important;
         font-size: 16px;
+    }
+}
+
+.card {
+    width: 100%;
+    cursor: pointer;
+    height: 180px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid rgba(0, 0, 0, .125);
+    border-bottom: 2px solid #67bd45 !important;
+    border-radius: .25rem;
+    font-size: 16px;
+    color: #000000;
+    &.noneheight {
+        height: auto !important;
+    }
+    &.heightpreferred {
+        height: 260px !important;
+    }
+    &:hover {
+        background-color: #b9ddb4;
+    }
+    &.nohover:hover {
+        background-color: #ffffff !important;
+    }
+    p {
+        padding: 0px;
+        margin: 0px;
+        padding-top: 20px;
+    }
+    .card-body {
+        text-align: center;
+        padding: 1.25rem;
+    }
+    .card_image {
+        height: 100px;
+    }
+    .card_image_icon {
+        max-height: 25px;
     }
 }

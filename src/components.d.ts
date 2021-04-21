@@ -8,7 +8,13 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface BenefitsNavigator {
     }
+    interface BluecrossblueComponent {
+    }
     interface BreadcrumbComponent {
+    }
+    interface EmotionalsocialwellbeingComponent {
+    }
+    interface FindaproviderComponent {
     }
     interface FooterComponent {
     }
@@ -24,6 +30,8 @@ export namespace Components {
     }
     interface MainComponent {
     }
+    interface NeedtofillpresComponent {
+    }
     interface PreferredfacilitiesComponent {
     }
 }
@@ -34,11 +42,29 @@ declare global {
         prototype: HTMLBenefitsNavigatorElement;
         new (): HTMLBenefitsNavigatorElement;
     };
+    interface HTMLBluecrossblueComponentElement extends Components.BluecrossblueComponent, HTMLStencilElement {
+    }
+    var HTMLBluecrossblueComponentElement: {
+        prototype: HTMLBluecrossblueComponentElement;
+        new (): HTMLBluecrossblueComponentElement;
+    };
     interface HTMLBreadcrumbComponentElement extends Components.BreadcrumbComponent, HTMLStencilElement {
     }
     var HTMLBreadcrumbComponentElement: {
         prototype: HTMLBreadcrumbComponentElement;
         new (): HTMLBreadcrumbComponentElement;
+    };
+    interface HTMLEmotionalsocialwellbeingComponentElement extends Components.EmotionalsocialwellbeingComponent, HTMLStencilElement {
+    }
+    var HTMLEmotionalsocialwellbeingComponentElement: {
+        prototype: HTMLEmotionalsocialwellbeingComponentElement;
+        new (): HTMLEmotionalsocialwellbeingComponentElement;
+    };
+    interface HTMLFindaproviderComponentElement extends Components.FindaproviderComponent, HTMLStencilElement {
+    }
+    var HTMLFindaproviderComponentElement: {
+        prototype: HTMLFindaproviderComponentElement;
+        new (): HTMLFindaproviderComponentElement;
     };
     interface HTMLFooterComponentElement extends Components.FooterComponent, HTMLStencilElement {
     }
@@ -82,6 +108,12 @@ declare global {
         prototype: HTMLMainComponentElement;
         new (): HTMLMainComponentElement;
     };
+    interface HTMLNeedtofillpresComponentElement extends Components.NeedtofillpresComponent, HTMLStencilElement {
+    }
+    var HTMLNeedtofillpresComponentElement: {
+        prototype: HTMLNeedtofillpresComponentElement;
+        new (): HTMLNeedtofillpresComponentElement;
+    };
     interface HTMLPreferredfacilitiesComponentElement extends Components.PreferredfacilitiesComponent, HTMLStencilElement {
     }
     var HTMLPreferredfacilitiesComponentElement: {
@@ -90,7 +122,10 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "benefits-navigator": HTMLBenefitsNavigatorElement;
+        "bluecrossblue-component": HTMLBluecrossblueComponentElement;
         "breadcrumb-component": HTMLBreadcrumbComponentElement;
+        "emotionalsocialwellbeing-component": HTMLEmotionalsocialwellbeingComponentElement;
+        "findaprovider-component": HTMLFindaproviderComponentElement;
         "footer-component": HTMLFooterComponentElement;
         "header-component": HTMLHeaderComponentElement;
         "home-component": HTMLHomeComponentElement;
@@ -98,13 +133,20 @@ declare global {
         "ihaveongoing-component": HTMLIhaveongoingComponentElement;
         "ineedprevcare-component": HTMLIneedprevcareComponentElement;
         "main-component": HTMLMainComponentElement;
+        "needtofillpres-component": HTMLNeedtofillpresComponentElement;
         "preferredfacilities-component": HTMLPreferredfacilitiesComponentElement;
     }
 }
 declare namespace LocalJSX {
     interface BenefitsNavigator {
     }
+    interface BluecrossblueComponent {
+    }
     interface BreadcrumbComponent {
+    }
+    interface EmotionalsocialwellbeingComponent {
+    }
+    interface FindaproviderComponent {
     }
     interface FooterComponent {
     }
@@ -120,11 +162,16 @@ declare namespace LocalJSX {
     }
     interface MainComponent {
     }
+    interface NeedtofillpresComponent {
+    }
     interface PreferredfacilitiesComponent {
     }
     interface IntrinsicElements {
         "benefits-navigator": BenefitsNavigator;
+        "bluecrossblue-component": BluecrossblueComponent;
         "breadcrumb-component": BreadcrumbComponent;
+        "emotionalsocialwellbeing-component": EmotionalsocialwellbeingComponent;
+        "findaprovider-component": FindaproviderComponent;
         "footer-component": FooterComponent;
         "header-component": HeaderComponent;
         "home-component": HomeComponent;
@@ -132,6 +179,7 @@ declare namespace LocalJSX {
         "ihaveongoing-component": IhaveongoingComponent;
         "ineedprevcare-component": IneedprevcareComponent;
         "main-component": MainComponent;
+        "needtofillpres-component": NeedtofillpresComponent;
         "preferredfacilities-component": PreferredfacilitiesComponent;
     }
 }
@@ -140,7 +188,10 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "benefits-navigator": LocalJSX.BenefitsNavigator & JSXBase.HTMLAttributes<HTMLBenefitsNavigatorElement>;
+            "bluecrossblue-component": LocalJSX.BluecrossblueComponent & JSXBase.HTMLAttributes<HTMLBluecrossblueComponentElement>;
             "breadcrumb-component": LocalJSX.BreadcrumbComponent & JSXBase.HTMLAttributes<HTMLBreadcrumbComponentElement>;
+            "emotionalsocialwellbeing-component": LocalJSX.EmotionalsocialwellbeingComponent & JSXBase.HTMLAttributes<HTMLEmotionalsocialwellbeingComponentElement>;
+            "findaprovider-component": LocalJSX.FindaproviderComponent & JSXBase.HTMLAttributes<HTMLFindaproviderComponentElement>;
             "footer-component": LocalJSX.FooterComponent & JSXBase.HTMLAttributes<HTMLFooterComponentElement>;
             "header-component": LocalJSX.HeaderComponent & JSXBase.HTMLAttributes<HTMLHeaderComponentElement>;
             "home-component": LocalJSX.HomeComponent & JSXBase.HTMLAttributes<HTMLHomeComponentElement>;
@@ -148,6 +199,7 @@ declare module "@stencil/core" {
             "ihaveongoing-component": LocalJSX.IhaveongoingComponent & JSXBase.HTMLAttributes<HTMLIhaveongoingComponentElement>;
             "ineedprevcare-component": LocalJSX.IneedprevcareComponent & JSXBase.HTMLAttributes<HTMLIneedprevcareComponentElement>;
             "main-component": LocalJSX.MainComponent & JSXBase.HTMLAttributes<HTMLMainComponentElement>;
+            "needtofillpres-component": LocalJSX.NeedtofillpresComponent & JSXBase.HTMLAttributes<HTMLNeedtofillpresComponentElement>;
             "preferredfacilities-component": LocalJSX.PreferredfacilitiesComponent & JSXBase.HTMLAttributes<HTMLPreferredfacilitiesComponentElement>;
         }
     }
