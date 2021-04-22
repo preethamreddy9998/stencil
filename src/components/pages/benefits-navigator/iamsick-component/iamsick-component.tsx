@@ -1,10 +1,11 @@
-import { Component, h } from '@stencil/core';
+import { Component, Event, EventEmitter, h } from '@stencil/core';
 
 @Component({
   tag: 'iamsick-component',
   styleUrl: 'iamsick-component.css'
 })
 export class IamsickComponent {
+  @Event({ bubbles: true, composed: true }) bNInnerpageRedirect: EventEmitter<string>;
 
   render() {
     return (
@@ -15,7 +16,7 @@ export class IamsickComponent {
                   <p><font color="Red">Call 911 if is an emergency or if you require immediate medical attention for conditions such as severe chest pain, trouble breathing, or serious injuries or wounds, etc.</font></p>
                 </div>
                 <div class="col-md-12">
-                  <div class="card noneheight">
+                  <div onClick={() => this.bNInnerpageRedirect.emit('ninetyeightpointimsick')} class="card noneheight">
                         <div class="card-body">
                           <h4><b>See a doctor now with 98point6</b></h4> 
                           Colds and flu, pink eye, infections, scrapes, rashes, etc.<br/><br/> <img src="assets/img/cost.png" class="card_image_icon" /> <b> $5 </b>| <img src="assets/img/stopwatch.png" class="card_image_icon"/><b> 5 minutes</b> 

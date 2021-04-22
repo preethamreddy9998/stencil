@@ -145,6 +145,7 @@ declare namespace LocalJSX {
     interface BreadcrumbComponent {
     }
     interface EmotionalsocialwellbeingComponent {
+        "onBNInnerpageRedirect"?: (event: CustomEvent<string>) => void;
     }
     interface FindaproviderComponent {
     }
@@ -155,10 +156,12 @@ declare namespace LocalJSX {
     interface HomeComponent {
     }
     interface IamsickComponent {
+        "onBNInnerpageRedirect"?: (event: CustomEvent<string>) => void;
     }
     interface IhaveongoingComponent {
     }
     interface IneedprevcareComponent {
+        "onBNInnerpageRedirect"?: (event: CustomEvent<string>) => void;
     }
     interface MainComponent {
     }

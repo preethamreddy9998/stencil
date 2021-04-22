@@ -10,7 +10,8 @@ export const config: Config = {
   globalStyle: 'src/components/shared/styles.scss',
   bundles: [
     { components: ['main-component'] },
-    { components: ['home-component'] }
+    { components: ['home-component'] },
+    { components: ['benefits-navigator'] }
   ],
   
   plugins: [

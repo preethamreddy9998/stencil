@@ -16,10 +16,10 @@ export class MainComponent {
         <div class="container-fluid">
             <div class="row">
               <div class="col">
-                  <header-component></header-component>
+                 
                   <Router.Switch>
-                    <Route path="/" to="/home" />
-                    <Route path="/main" to="/home" />
+                    <Route path="/" to="/benefits" />
+                    <Route path="/main" to="/benefits" />
                     <Route path="/home">
                           <home-component></home-component>
                     </Route>
@@ -28,7 +28,7 @@ export class MainComponent {
                     </Route>
 
                     </Router.Switch>
-                    <footer-component></footer-component>
+                    
               </div>
             </div>
           </div>

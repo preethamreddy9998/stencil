@@ -9,18 +9,18 @@
 
 ### Depends on
 
-- [header-component](../../shared/header-component)
 - [home-component](../home-component)
 - [benefits-navigator](../benefits-navigator)
-- [footer-component](../../shared/footer-component)
 
 ### Graph
 ```mermaid
 graph TD;
-  main-component --> header-component
   main-component --> home-component
   main-component --> benefits-navigator
-  main-component --> footer-component
+  benefits-navigator --> iamsick-component
+  benefits-navigator --> ineedprevcare-component
+  benefits-navigator --> ihaveongoing-component
+  benefits-navigator --> preferredfacilities-component
   style main-component fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

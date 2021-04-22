@@ -29,10 +29,6 @@ export class HomeComponent {
             <th scope="row">2</th>
             <td><a href="#">Dashboard</a></td>
           </tr>
-          {/* <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-          </tr> */}
         </tbody>
       </table>
     </div>
